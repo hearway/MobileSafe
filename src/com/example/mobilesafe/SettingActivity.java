@@ -21,34 +21,30 @@ public class SettingActivity extends Activity {
 		siv_update = (SettingItemView) findViewById(R.id.siv_update);
 		
 		boolean update = sp.getBoolean("update", false);
-		if(update){
-			//自动升级已经开启
+		if (update) {
 			siv_update.setChecked(true);
 			siv_update.setDesc("自动升级已经开启");
-		}else{
-			//自动升级已经关闭
+		} else {
 			siv_update.setChecked(false);
 			siv_update.setDesc("自动升级已经关闭");
 		}
+		
 		siv_update.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				Editor editor = sp.edit();
-				//判断是否有选中
-				//已经打开自动升级了
-				if(siv_update.isChecked()){
+				if ( siv_update.isChecked()) {
 					siv_update.setChecked(false);
 					siv_update.setDesc("自动升级已经关闭");
 					editor.putBoolean("update", false);
 					
-				}else{
-					//没有打开自动升级
+				} else {
 					siv_update.setChecked(true);
 					siv_update.setDesc("自动升级已经开启");
 					editor.putBoolean("update", true);
 				}
-				editor.commit();
+				editor.apply();
 			}
 		});
 	}

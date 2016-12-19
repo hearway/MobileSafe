@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -23,6 +24,7 @@ public class SplashActivity extends Activity {
 	private static final String TAG = "SplashActivity";
 	
 	private TextView tv_splash_version;
+	private SharedPreferences sPreferences;
 	
 	private Handler mHandler = new Handler() {  
         @Override  
@@ -36,18 +38,39 @@ public class SplashActivity extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_splash);
 		
-		tv_splash_version = (TextView) findViewById(R.id.tv_splash_version);
-		tv_splash_version.setText("版本号 " + getVersionName());
-		mHandler.postDelayed(new Runnable() {  
-            @Override  
-            public void run() {  
-            	RelativeLayout rl_splash = (RelativeLayout) findViewById(R.id.rl_splash);
-            	rl_splash.setBackground(getResources().getDrawable(R.drawable.ad));
-                runAnimator(rl_splash);
-            }  
-        }, 200);
+		initViews();
+		initDatas();
+		initEvents();
 	}
 	
+	private void initEvents() {
+		boolean update = sPreferences.getBoolean("update", false);
+		if (update) {
+			checkUpdate();
+		} else {
+			mHandler.postDelayed(new Runnable() {  
+	            @Override  
+	            public void run() {  
+	            	RelativeLayout rl_splash = (RelativeLayout) findViewById(R.id.rl_splash);
+	            	rl_splash.setBackground(getResources().getDrawable(R.drawable.ad));
+	                runAnimator(rl_splash);
+	            }  
+	        }, 200);
+		}
+	}
+
+	private void checkUpdate() {		
+	}
+
+	private void initDatas() {
+		sPreferences = getSharedPreferences("config", MODE_PRIVATE);
+	}
+
+	private void initViews() {
+		tv_splash_version = (TextView) findViewById(R.id.tv_splash_version);
+		tv_splash_version.setText("版本号 " + getVersionName());
+	}
+
 	private void runAnimator(RelativeLayout rl_splash) {  
         Log.e(TAG, "展示广告动画1s-----2");  
         ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(rl_splash, "alpha", 0, 1).setDuration(1000);  

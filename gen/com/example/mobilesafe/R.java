@@ -37,25 +37,33 @@ public final class R {
         public static final int trojan=0x7f02000c;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000b;
-        public static final int cb_status=0x7f08000a;
+        public static final int action_settings=0x7f08000f;
+        public static final int btn_cancel=0x7f080008;
+        public static final int btn_ok=0x7f080007;
+        public static final int cb_status=0x7f08000e;
+        public static final int et_setup_confirm=0x7f080009;
+        public static final int et_setup_pwd=0x7f080006;
         public static final int gv_home_list=0x7f080001;
-        public static final int iv_item=0x7f080006;
+        public static final int iv_item=0x7f08000a;
         public static final int rl_splash=0x7f080004;
         public static final int siv_update=0x7f080003;
         public static final int textView1=0x7f080002;
-        public static final int tv_desc=0x7f080009;
+        public static final int tv_desc=0x7f08000d;
         public static final int tv_home_title=0x7f080000;
-        public static final int tv_item=0x7f080007;
+        public static final int tv_item=0x7f08000b;
         public static final int tv_splash_version=0x7f080005;
-        public static final int tv_title=0x7f080008;
+        public static final int tv_title=0x7f08000c;
     }
     public static final class layout {
         public static final int activity_home=0x7f030000;
-        public static final int activity_setting=0x7f030001;
-        public static final int activity_splash=0x7f030002;
-        public static final int list_item_home=0x7f030003;
-        public static final int setting_item_view=0x7f030004;
+        public static final int activity_lostfind=0x7f030001;
+        public static final int activity_setting=0x7f030002;
+        public static final int activity_setup1=0x7f030003;
+        public static final int activity_splash=0x7f030004;
+        public static final int dialog_enter_password=0x7f030005;
+        public static final int dialog_setup_password=0x7f030006;
+        public static final int list_item_home=0x7f030007;
+        public static final int setting_item_view=0x7f030008;
     }
     public static final class menu {
         public static final int splash=0x7f070000;

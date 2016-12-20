@@ -23,6 +23,7 @@
         android:text="下次重启手机如果发现sim变化\n就会发送报警短信" />
     
     <com.example.mobilesafe.ui.SettingItemView
+        android:id="@+id/siv_setup2_sim"
         hearway:desc_on="sim卡已绑定"
         hearway:desc_off="sim卡没有绑定"
         hearway:title="点击绑定sim卡"

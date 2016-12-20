@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 
 public class LostFindActivity extends Activity {
 	private final String TAG = "LostFindActivity";
@@ -22,6 +23,12 @@ public class LostFindActivity extends Activity {
 			startActivity(intent);
 			finish();
 		}
+	}
+	
+	public void reEnterSetup(View view) {
+		Intent intent = new Intent(this, SetupActivity.class);
+		startActivity(intent);
+		finish();
 	}
 	
 }

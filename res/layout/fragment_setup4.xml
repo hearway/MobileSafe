@@ -8,78 +8,62 @@
         android:id="@+id/tv_home_title"
         android:gravity="center"
         android:textSize="22sp"
-        android:text="1.欢迎使用手机防盗"
+        android:text="4.恭喜您，设置完成"
         android:layout_height="55dip"
         android:layout_width="match_parent"/>
     
-    <TextView 
-        android:drawableLeft="@android:drawable/star_big_on"
-        style="@style/text_content_style"
-        android:text="您的手机卫士" />
-    
-    <TextView 
-        android:drawableLeft="@android:drawable/star_big_on"
-        style="@style/text_content_style"
-        android:text="sim卡变更报警" />
-    
-    <TextView 
-        android:drawableLeft="@android:drawable/star_big_on"
-        style="@style/text_content_style"
-        android:text="GPS追踪" />
-    
-    <TextView 
-        android:drawableLeft="@android:drawable/star_big_on"
-        style="@style/text_content_style"
-        android:text="远程数据销毁" />
-    
-    <TextView 
-        android:drawableLeft="@android:drawable/star_big_on"
-        style="@style/text_content_style"
-        android:text="远程锁屏" />
+    <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="您没有开启防盗保护" />
     
     <LinearLayout 
         android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"/>
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"/>
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"/>
+        
         <ImageView 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/presence_online"/>
         
-        <ImageView 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/presence_invisible"/>
-        
-        <ImageView 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/presence_invisible"/>
-        
-        <ImageView 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/presence_invisible"/>      
     </LinearLayout>
     
-    <RelativeLayout 
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        
-        <ImageView 
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:src="@drawable/setup1"/>  
-            
+            android:src="@drawable/phone" />
+
+<!--         <Button
+            android:id="@+id/btn_pre_setup4" 
+            style="@style/button_pre_style" />
+
         <Button
-            android:text="下一步"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        
-    </RelativeLayout>
+            android:id="@+id/btn_finish_setup4"
+            style="@style/button_next_style"
+            android:text="设置完成" />
+ -->    </RelativeLayout>
     
 </LinearLayout>

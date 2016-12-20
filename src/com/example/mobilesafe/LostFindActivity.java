@@ -18,7 +18,7 @@ public class LostFindActivity extends Activity {
 		if (configed) {
 			setContentView(R.layout.activity_lostfind);
 		} else {
-			Intent intent = new Intent(this, Setup1Activity.class);
+			Intent intent = new Intent(this, SetupActivity.class);
 			startActivity(intent);
 			finish();
 		}

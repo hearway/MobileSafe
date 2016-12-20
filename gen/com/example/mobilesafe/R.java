@@ -9,6 +9,30 @@ package com.example.mobilesafe;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int desc_off=0x7f010002;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int desc_on=0x7f010001;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int title=0x7f010000;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -30,40 +54,52 @@ public final class R {
         public static final int launcher_bg=0x7f020005;
         public static final int luncher_bg=0x7f020006;
         public static final int netmanager=0x7f020007;
-        public static final int safe=0x7f020008;
-        public static final int settings=0x7f020009;
-        public static final int sysoptimize=0x7f02000a;
-        public static final int taskmanager=0x7f02000b;
-        public static final int trojan=0x7f02000c;
+        public static final int phone=0x7f020008;
+        public static final int safe=0x7f020009;
+        public static final int settings=0x7f02000a;
+        public static final int setup1=0x7f02000b;
+        public static final int sysoptimize=0x7f02000c;
+        public static final int taskmanager=0x7f02000d;
+        public static final int trojan=0x7f02000e;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000f;
-        public static final int btn_cancel=0x7f080008;
-        public static final int btn_ok=0x7f080007;
-        public static final int cb_status=0x7f08000e;
-        public static final int et_setup_confirm=0x7f080009;
-        public static final int et_setup_pwd=0x7f080006;
+        public static final int action_settings=0x7f080013;
+        public static final int btn_cancel=0x7f080009;
+        public static final int btn_next=0x7f08000b;
+        public static final int btn_ok=0x7f080008;
+        public static final int btn_pre=0x7f08000c;
+        public static final int cb_status=0x7f080012;
+        public static final int et_setup_confirm=0x7f08000a;
+        public static final int et_setup_pwd=0x7f080007;
         public static final int gv_home_list=0x7f080001;
-        public static final int iv_item=0x7f08000a;
-        public static final int rl_splash=0x7f080004;
+        public static final int iv_item=0x7f08000e;
+        public static final int rl_splash=0x7f080005;
         public static final int siv_update=0x7f080003;
         public static final int textView1=0x7f080002;
-        public static final int tv_desc=0x7f08000d;
+        public static final int tv_desc=0x7f080011;
         public static final int tv_home_title=0x7f080000;
-        public static final int tv_item=0x7f08000b;
-        public static final int tv_splash_version=0x7f080005;
-        public static final int tv_title=0x7f08000c;
+        public static final int tv_item=0x7f08000f;
+        public static final int tv_setup1_title=0x7f08000d;
+        public static final int tv_splash_version=0x7f080006;
+        public static final int tv_title=0x7f080010;
+        public static final int vp_setup=0x7f080004;
     }
     public static final class layout {
         public static final int activity_home=0x7f030000;
         public static final int activity_lostfind=0x7f030001;
         public static final int activity_setting=0x7f030002;
-        public static final int activity_setup1=0x7f030003;
-        public static final int activity_splash=0x7f030004;
-        public static final int dialog_enter_password=0x7f030005;
-        public static final int dialog_setup_password=0x7f030006;
-        public static final int list_item_home=0x7f030007;
-        public static final int setting_item_view=0x7f030008;
+        public static final int activity_setup=0x7f030003;
+        public static final int activity_setup1=0x7f030004;
+        public static final int activity_splash=0x7f030005;
+        public static final int dialog_enter_password=0x7f030006;
+        public static final int dialog_setup_password=0x7f030007;
+        public static final int fragment_bottom=0x7f030008;
+        public static final int fragment_setup1=0x7f030009;
+        public static final int fragment_setup2=0x7f03000a;
+        public static final int fragment_setup3=0x7f03000b;
+        public static final int fragment_setup4=0x7f03000c;
+        public static final int list_item_home=0x7f03000d;
+        public static final int setting_item_view=0x7f03000e;
     }
     public static final class menu {
         public static final int splash=0x7f070000;
@@ -100,5 +136,69 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
+        public static final int button_next_style=0x7f060003;
+        public static final int button_pre_style=0x7f060004;
+        public static final int text_content_style=0x7f060002;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a TextView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #TextView_desc_off com.example.mobilesafe:desc_off}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextView_desc_on com.example.mobilesafe:desc_on}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextView_title com.example.mobilesafe:title}</code></td><td></td></tr>
+           </table>
+           @see #TextView_desc_off
+           @see #TextView_desc_on
+           @see #TextView_title
+         */
+        public static final int[] TextView = {
+            0x7f010000, 0x7f010001, 0x7f010002
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.mobilesafe.R.attr#desc_off}
+          attribute's value can be found in the {@link #TextView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.mobilesafe:desc_off
+        */
+        public static final int TextView_desc_off = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.example.mobilesafe.R.attr#desc_on}
+          attribute's value can be found in the {@link #TextView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.mobilesafe:desc_on
+        */
+        public static final int TextView_desc_on = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.mobilesafe.R.attr#title}
+          attribute's value can be found in the {@link #TextView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.mobilesafe:title
+        */
+        public static final int TextView_title = 0;
+    };
 }

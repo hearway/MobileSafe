@@ -23,10 +23,10 @@ public class SettingActivity extends Activity {
 		boolean update = sp.getBoolean("update", false);
 		if (update) {
 			siv_update.setChecked(true);
-			siv_update.setDesc("自动升级已经开启");
+//			siv_update.setDesc("自动升级已经开启");
 		} else {
 			siv_update.setChecked(false);
-			siv_update.setDesc("自动升级已经关闭");
+//			siv_update.setDesc("自动升级已经关闭");
 		}
 		
 		siv_update.setOnClickListener(new OnClickListener() {
@@ -36,15 +36,15 @@ public class SettingActivity extends Activity {
 				Editor editor = sp.edit();
 				if ( siv_update.isChecked()) {
 					siv_update.setChecked(false);
-					siv_update.setDesc("自动升级已经关闭");
+//					siv_update.setDesc("自动升级已经关闭");
 					editor.putBoolean("update", false);
 					
 				} else {
 					siv_update.setChecked(true);
-					siv_update.setDesc("自动升级已经开启");
+//					siv_update.setDesc("自动升级已经开启");
 					editor.putBoolean("update", true);
 				}
-				editor.apply();
+				editor.commit();
 			}
 		});
 	}

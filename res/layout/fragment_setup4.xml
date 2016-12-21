@@ -13,6 +13,7 @@
         android:layout_width="match_parent"/>
     
     <CheckBox
+        android:id="@+id/cb_step4_proteting"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="您没有开启防盗保护" />

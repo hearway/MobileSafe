@@ -17,10 +17,13 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class SetupActivity extends FragmentActivity implements OnClickListener {
 	
@@ -110,6 +113,18 @@ public class SetupActivity extends FragmentActivity implements OnClickListener {
 				Intent intent = new Intent(this, LostFindActivity.class);
 				startActivity(intent);
 				finish();
+			} else if (2 == currentPosition) {
+				EditText et_setup3_phone = (EditText) findViewById(R.id.et_setup3_phone);
+				String phone = et_setup3_phone.getText().toString().trim();
+				if (TextUtils.isEmpty(phone)) {
+					Toast.makeText(this, "安全号码还没有设置", Toast.LENGTH_SHORT).show();
+				} else {				
+					Editor editor = sPreferences.edit();
+					editor.putString("safenumber", phone);
+					editor.commit();
+				
+					mViewPager.setCurrentItem(++currentPosition);
+				}
 			} else {
 				mViewPager.setCurrentItem(++currentPosition);
 			}

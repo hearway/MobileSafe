@@ -74,6 +74,8 @@ public class HomeActivity extends Activity {
 				case ITEM2:
 					break;
 				case ITEM3:
+					Intent it = new Intent(HomeActivity.this, MapActivity.class);
+					startActivity(it);
 					break;
 				case ITEM4:
 					showLostFindDialog();
